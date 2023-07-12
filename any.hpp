@@ -50,11 +50,6 @@ namespace detail
 			return false;
 		}
 
-		constexpr ~wrapper() final
-		{
-			std::destroy_at(&value_);
-		}
-
 		[[msvc::no_unique_address]] T value_;
 	};
 }
